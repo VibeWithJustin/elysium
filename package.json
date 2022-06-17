@@ -1,6 +1,19 @@
 {
-  "dependencies": {
-    "pixi-filters": "^4.1.6",
-    "pixi.js": "^6.4.2"
-  }
+  "name": "elysium",
+  "version": "1.0.0",
+  "description": "",
+  "main": "game.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VibeWithJustin/elysium.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VibeWithJustin/elysium/issues"
+  },
+  "homepage": "https://github.com/VibeWithJustin/elysium#readme"
 }

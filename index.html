@@ -1,72 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Elysium</title>
-
-        <style>
-            @font-face {
-                font-family: 'Lo-Res 9 Plus Wide';
-                src: url(assets/fonts/LoRes9PlusOTWide-Regular.ttf);
-            }
-            body {
-                background-color: black;
-            }
-            #usefont {
-                font-family: 'Lo-Res 9 Plus Wide';
-                font-size: 0px;
-            }
-        </style>
-
-        <script src="pixi.js"></script>
-        <script src="/PixiJS/node_modules/pixi-filters/dist/pixi-filters.js"></script>
-        
-        <script>
-        
-            window.onload = function() {
-                let app = new PIXI.Application(
-                    {
-                        width:  window.innerWidth,
-                        height: window.innerHeight,
-                        backgroundColor: 0x323241,
-                        resizeTo: (window),
-                    }
-                )
-
-                document.body.appendChild(app.view);
-
-                elysiumText = new PIXI.Text('Elysium');
-                elysiumText.x = app.view.width / 2;
-                elysiumText.y = app.view.height / 2;
-                elysiumText.anchor.set(0.5);
-                elysiumText.style = new PIXI.TextStyle({
-                    fill: 0xFFFFFF,
-                    fontSize: '100px',
-                    fontFamily: 'Lo-Res 9 Plus Wide',
-                })
-                const bloomFilter = new PIXI.filters.AdvancedBloomFilter(
-                    {threshold = .25, brightness = 1, blur = 1.5, bloomScale = .35, quality = 3}
-                );
-                    // bloomFilter.threshold = .25;
-                    // bloomFilter.brightness = 1;
-                    // bloomFilter.blur = 1.5;
-                    // bloomFilter.bloomScale = .35;
-                    // bloomFilter.quality = 3
-                elysiumText.filters = [bloomFilter]
-                app.stage.addChild(elysiumText);
-            }
-
-        </script>
-
-
-
-
+        <meta charset="UTF-8">
+        <meta name="viewport" content="user-scalable=0, initial-scale=1, minimum-scale=1, maximum-scale=1, width=device-width, minimal-ui=1"
     </head>
-
     <body>
-        <div id="usefont">A</div>
-    </body> 
-
+        <div id="game"></div>
+        <script src="phaser.js"></script>
+        <script src="game.js"></script>
+    </body>
 </html>
